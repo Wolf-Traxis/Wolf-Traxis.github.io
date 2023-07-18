@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pris au piège</title>
+	<meta charset="utf-8"/>
+	<!-- <link rel="stylesheet" type="text/css" href="styles\normalize.css"> -->
+	<link rel="stylesheet" type="text/css" href="styles\main.css">
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Gruppo&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="scripts/jQuery-331.min.js"></script>
+	<script type="text/javascript" src="scripts/waveManager.js"></script>
+	<script type="text/javascript" src="scripts/heroManager.js"></script>
+	<script type="text/javascript" src="scripts/scoreManager.js"></script>
+	<script type="text/javascript" src="scripts/soundManager.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+	<audio id="sndShoot"><source src="sounds/shoot.mp3" type="audio/mpeg"></audio>
+	<audio id="sndHit"><source src="sounds/hit.mp3" type="audio/mpeg"></audio>
+	<audio id="sndTouch"><source src="sounds/touch.mp3" type="audio/mpeg"></audio>
+	<audio id="sndWalk"><source src="sounds/walk.mp3" type="audio/mpeg"></audio>
+	<audio id="sndHeroHit"><source src="sounds/heroHit.mp3" type="audio/mpeg"></audio>
+	<audio id="sndNewWave"><source src="sounds/newWave.mp3" type="audio/mpeg"></audio>
+	<audio id="sndFall"><source src="sounds/fall.mp3" type="audio/mpeg"></audio>
+	<audio id="sndBonus"><source src="sounds/bonus.mp3" type="audio/mpeg"></audio>
+	<audio id="sndMalus"><source src="sounds/malus.mp3" type="audio/mpeg"></audio>
+	<audio id="sndGameOver"><source src="sounds/gameOver.mp3" type="audio/mpeg"></audio>
+	<div class="mainContainer">
+		<div class="informationZone">
+			<div class="titleZone"><h2>Pris au piège</h2></div>
+			<div class="logoZone"></div>
+			<div class="optionZone">
+				<label id="lblDifficultyLevel"></label>
+				<label id="lblSpecialMode"></label>
+			</div>
+			<div class="scoreZone">
+				<label class="currentScore"></label>
+				<div class="statistics">
+					<label class="statTitle">Vague</label>
+					<label class="statTitle">Ennemis</label>
+					<label class="statTitle">Vies</label>
+					<label class="statTitle">Succès</label>
+					<br>
+					<label id="waveNo" class="statValue"></label>
+					<label id="spidersNumber" class="statValue"></label>
+					<label id="lives" class="statValue"></label>
+					<label id="killedSpiders" class="statValue"></label>
+				</div>
+				<div id="hallOfFame">
+					<div class="bestTenContainer" id="BTOne"></div>
+					<div class="bestTenContainer" id="BTTwo"></div>
+					<div class="lastFiveContainer"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mainMenu">
+			<div class="rules">
+				<p>Vous incarnez une petite mouche prise dans le piège mortel piège d'une toile d'araignée. Engluée, vous ne pouvez pas vous déplacer et restez collée au centre de la toile.</p>
+				<p>Tout ce que vous pouvez faire c'est tourner sur vous-même et tirer des projectiles vers les araignées qui, alertées par les vibrations de la toile, se précipitent vers vous pour vous dévorer.</p>
+				<p>La vitesse de déplacement et la robustesse de ces araignées dépendent tous les deux de leur taille. Les plus grosses nécessitent d'être touchées 3 fois pour être détruites et sont les moins rapides.</p>
+				<p>De temps à autre une araignée détruite laisse tomber un objet. Si vous tirez dessus, vous déclenchez un mode qui peut vous apporter de l'aide, mais parfois un objet ramassé peut au contraire rendre l'aventure plus difficile...</p>
+				<p>Au début de la partie, vous disposez de 3 vies et le jeu se termine lorsqu'elles ont toutes été dépensées.</p>
+				<p>Bonne partie !</p>
+			</div>
+			<div class="difficultyLevel">
+				<label class="difficultyTitle" data-level="0">Niveau de difficulté</label>
+				<label class="difficulty" data-level="1">Très faible</label>
+				<label class="difficulty" data-level="2">Faible</label>
+				<label class="difficulty selected" data-level="3">Modéré</label>
+				<label class="difficulty" data-level="4">Difficile</label>
+				<label class="difficulty" data-level="5">Corsé</label>
+			</div>
+			<button class="startGame">Démarrer une partie</button>
+			<div class="soundLevel">
+				<label>Niveau sonore</label>
+				<label class="changeSound minus">-</label>
+				<label class="changeSound plus">+</label>
+				<div class="soundLevelValue"></div>
+			</div>
+		</div>
+		<div class="gameArea">
+			<div class="web"></div>
+			<label class="waveLevel"></label>
+			<img class="hero" src="images/mouche.png"></div>
+			<div class="gameOverZone gameNotOver">
+				<label class="title">G&nbsp;A&nbsp;M&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;V&nbsp;E&nbsp;R</label>
+				<p class="message"></p>
+				<p class="message"></p>
+				<fieldset>
+					<label>Entrez votre nom :</label>
+					<input type="text" class="userName">
+				</fieldset>
+				<button class="applyButton">Valider</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

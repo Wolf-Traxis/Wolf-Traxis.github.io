@@ -1,0 +1,485 @@
+body
+{
+    background: #041302;
+}
+
+h2 
+{
+    color: goldenrod;
+    font-family: "Fredericka the Great";
+    font-size: 210%;
+    position: absolute;
+    top: -28px;
+    left: 34px;
+}
+
+.mainContainer
+{
+    position: absolute;
+    left: 25%;
+    top: 1%;
+    max-width: 800px;
+    width: 98%;
+    max-height: 720px;
+    height: 98%;
+    /*border: solid 1px red;*/
+}
+
+.logoZone
+{
+    width: 48px;
+    position: absolute;
+    background: url(../images/logoWeb.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48px;
+    bottom: 8px;
+    left: 60px;
+    filter: invert(1) sepia() hue-rotate(-55deg);
+}
+
+.informationZone 
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 13%;
+    border: solid 1px lemonchiffon;
+    /*border-top: solid 1px blue;*/
+    /*border-bottom: solid 1px blue;*/
+}
+
+.gameArea
+{
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    top: 16%;
+    z-index: 0;
+    overflow: hidden;
+    border: solid 1px green;
+    background-image: url("../images/fond01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*border-top: solid 1px black;*/
+    /*border-bottom: solid 1px black;*/
+}
+
+.web
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .4;
+    background-image: url("../images/toileFond.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.hero
+{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 48%;
+	top: 47%;
+	transform-origin: center center;
+	transform: rotate(0deg);
+    pointer-events: none;
+	z-index: 2;
+}
+
+.bullet
+{
+    position: absolute;
+    transform-origin: center center;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: solid 1px gainsboro;
+    background: black;
+    box-shadow: inset 0 0 5px #FFFF,
+                inset 2px 0 8px #FF00FF,
+                inset -2px 0 8px #00FFFF,
+                inset 2px 0 30px #FF00FF,
+                inset -2px 0 30px #00FFFF,
+                0 0 5px #FFFFFF,
+                -1px 0 8px #FF00FF,
+                1px 0 8px #00FFFF;
+    z-index: 1;
+}
+
+.spider
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    pointer-events: none;
+    transform-origin: center center;
+    z-index: 2;
+}
+
+.explosion
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.points, .extraName
+{
+    position: absolute;
+    z-index: 2;
+    color: #FF8100;
+    font-family: 'Frederika the Great'
+    font-size:80%;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.extraName
+{
+    color: tomato;
+    text-shadow: 0px 0px 3px black;
+    pointer-events: none;
+}
+
+.waveLevel
+{
+    font-size: 400%;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    top: -100px;
+    transition: all 2s linear;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.scoreZone 
+{
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    color: lemonchiffon;
+}
+
+.currentScore
+{
+    font-family: 'Gruppo';
+    font-size: 210%;
+    font-weight: bold;
+    width: 170px;
+    display: inline-block;
+    text-align: right;
+    margin-top: 14px;
+}
+
+.statTitle
+{
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    font-size: 70%;
+}
+
+.statValue
+{
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Gruppo;
+}
+
+#hallOfFame
+{
+    width: 380px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bestTenContainer
+{
+    display: inline-block;
+    width: 110px;
+    height: 90px;
+    vertical-align: top;
+    text-align: right;
+}
+
+.bestTen
+{
+    font-family: Gruppo;
+    font-size: 70%;
+    display: inline-block;
+    width: 77px;
+    color: goldenrod;
+}
+
+.lastFiveContainer
+{
+    display: inline-block;
+    width: 110px;
+    height: 90px;
+    text-align: right;
+}
+
+.lastFive
+{
+    font-family: Gruppo;
+    font-size: 69%;
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+    color: palegreen;
+}
+
+.extra
+{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: chocolate;
+    border: solid 2px gold;
+    border-radius: 50%;
+    color: burlywood;
+    text-align: center;
+    transform-origin: center center;
+    pointer-events: none;
+}
+
+.extra label
+{
+    position: relative;
+    top: 4px;
+    pointer-events: none;
+}
+
+.gameOverZone
+{
+    position: absolute;
+    left: 208px;
+    top: 320px;
+    background: powderblue;
+    width: 370px;
+    height: 180px;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 4px;
+    box-shadow: 2px 2px 8px black;
+    z-index: 2;
+}
+
+.gameNotOver
+{
+    display: none;
+}
+
+.title
+{
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 8px;
+    width: 100%;
+    border-bottom: solid 2px black;
+    height: 22px;
+    pointer-events: none;
+}
+
+.bigPoints
+{
+    font-size: 110%;
+    color: green;
+    text-decoration: underline;
+    pointer-events: none;
+}
+
+.message
+{
+    text-align: center;
+    font-style: italic;
+    font-family: "Fredericka the Great";
+    pointer-events: none;
+}
+
+.applyButton
+{
+    display: block;
+    left: 110px;
+    position: relative;
+    top: 12px;
+    width: 140px;
+}
+
+.mainMenu
+{
+    z-index: 3;
+    position: absolute;
+    width: 600px;
+    height: 430px;
+    background: wheat;
+    padding: 16px;
+    font-family: 'Gruppo';
+    font-weight: bold;
+    text-align: justify;
+    border-radius: 10px;
+    left: 90px;
+    top: 180px;
+    box-shadow: 1px 1px 2px 2px black;
+}
+
+.startGame
+{
+    position: absolute;
+    right: 20px;
+    bottom: 34px;
+}
+
+fieldset
+{
+    padding: 0;
+    border: none;
+    text-align: center;
+}
+
+label
+{
+    font-family: "Fredericka the Great";
+}
+
+.userName
+{
+    width: 40px;
+    text-align: center;
+}
+
+.malus
+{
+    background: tomato;
+}
+
+.bonus
+{
+    background: palegreen;
+}
+
+.difficultyLevel
+{
+    position: absolute;
+    width: 60%;
+}
+
+.difficultyTitle
+{
+    display: block;
+    border-bottom: solid;
+    margin-bottom: 10px;
+}
+
+.difficulty
+{
+    display: inline-block;
+    width: 66px;
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    border: solid 1px rosybrown;
+    cursor: pointer;
+    background: white;
+    transition: height .5s linear;
+}
+
+.difficulty:hover
+{
+    background: lemonchiffon; 
+    height: 26px;
+}
+
+.selected
+{
+    background: palegreen;
+    height: 26px;
+}
+
+.optionZone 
+{
+    position: absolute;
+    color: white;
+    left: 120px;
+    top: 46px;
+    font-size: 80%;
+}
+
+.optionZone label
+{
+    display: block;
+}
+
+#lblSpecialMode
+{
+    font-size: 70%;
+    color: tomato;
+}
+
+.soundLevel
+{
+    position: absolute;
+    right: 21px;
+    bottom: 4px;
+    width: 160px;
+}
+
+.soundLevel label 
+{
+    font-family: 'Gruppo';
+    font-weight: normal;
+    font-size: 80%;
+}
+
+.soundLevelValue
+{
+    height: 4px;
+    width: 100%;
+    background: white;
+    border: solid 1px black;
+}
+
+.changeSound 
+{
+    display: inline-block;
+    width: 28px;
+    height: 10px;
+    text-align: center;
+    border: solid 1px black;
+    top: 2px;
+    position: relative;
+    background: silver;
+    border-radius: 4px;
+    font-weight: bold !important;
+    font-family: 'Federicka The Great' !important;
+    font-size: 98% !important;
+    padding: 0 !important;
+    line-height: 0.6;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.changeSound:hover
+{
+    background: palegreen;
+}
